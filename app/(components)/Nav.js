@@ -4,6 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+import Link from "next/link";
 
 export default function Nav() {
   return (
@@ -11,14 +12,16 @@ export default function Nav() {
       <div className="w-full lg:flex lg:justify-evenly lg:items-center">
         {/* image */}
         <div className="mobile:flex md:w-[90vw] sm:w-[85vw] mobile:w-[80vw] mobile:justify-between lg:w-auto">
-          <Image
-            src={
-              "https://zeevector.com/wp-content/uploads/Amazon-Logo-White@zeevector.png"
-            }
-            width={110}
-            height={80}
-            alt="amazon-logo"
-          />
+          <Link href={"/"}>
+            <Image
+              src={
+                "https://zeevector.com/wp-content/uploads/Amazon-Logo-White@zeevector.png"
+              }
+              width={110}
+              height={80}
+              alt="amazon-logo"
+            />
+          </Link>
           {/* sign in for mobile */}
           <div className="lg:hidden mobile:flex text-white hover:cursor-pointer">
             <p>Sign in</p>
@@ -30,8 +33,8 @@ export default function Nav() {
         <div className="mobile:small mobile:gap-1 lg:big">
           <p className="text-white text-xs font-[80]">Deliver to</p>
           <p className="text-white font-bold">Nepal</p>
-          <p></p>
         </div>
+        <br />
         {/* input values */}
         <div className="mobile:w-full mobile:mt-2 flex lg:w-[60%] border-none">
           <div className="mobile:hidden lg:flex items-center px-2 text-sm text-black bg-[#f5f5f5] border-[2px] rounded-l-lg hover:cursor-pointer">
