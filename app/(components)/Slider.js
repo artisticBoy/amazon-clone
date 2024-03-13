@@ -25,7 +25,7 @@ export default function Slider() {
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
-        className="mySwiper"
+        className="mySwiper mb-[-40px]"
       >
         <SwiperSlide>
           <Image
@@ -35,6 +35,7 @@ export default function Slider() {
             width={1500}
             height={1500}
             alt="image"
+            className="homeImage__1"
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -45,6 +46,7 @@ export default function Slider() {
             width={1000}
             height={1000}
             alt="image"
+            className="homeImage__1"
           />
         </SwiperSlide>
       </Swiper>

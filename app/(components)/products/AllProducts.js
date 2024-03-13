@@ -6,6 +6,7 @@ export default function AllProducts() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     async function getData() {
+      await new Promise((resolve) => setTimeout(resolve, 2000));
       const res = await fetch("https://fakestoreapi.com/products");
       const data = await res.json();
       setProducts(data);
@@ -13,7 +14,7 @@ export default function AllProducts() {
     getData();
   }, []);
   return (
-    <div>
+    <div className="z-20">
       {products.length ? (
         <EachProducts data={products} />
       ) : (

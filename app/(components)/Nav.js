@@ -56,20 +56,24 @@ export default function Nav() {
           <ArrowDropDownIcon />
         </div>
         {/* sig in and accounts */}
-        <div className="mobile:hidden lg:flex lg:flex-col text-white hover:cursor-pointer">
-          <span className="font-thin text-xs">Hello, sign in</span>
-          <p className="font-bold">Account & Lists</p>
-        </div>
+        <Link href={"/account"}>
+          <div className="mobile:hidden lg:flex lg:flex-col text-white hover:cursor-pointer">
+            <span className="font-thin text-xs">Hello, sign in</span>
+            <p className="font-bold">Account & Lists</p>
+          </div>
+        </Link>
         {/* Returns and orders */}
         <div className="mobile:hidden lg:flex lg:flex-col text-white hover:cursor-pointer">
           <span className="font-thin text-xs">Returns</span>
           <p className="font-bold">& Orders</p>
         </div>
         {/* cart */}
-        <div className="lg:static mobile:flex mobile:items-center mobile:gap-1 mobile:fixed mobile:right-4 mobile:top-3 text-white hover:cursor-pointer">
-          <ShoppingBasketIcon />
-          <p>0</p>
-        </div>
+        <Link href={"/checkout"}>
+          <div className="lg:static mobile:flex mobile:items-center mobile:gap-1 mobile:fixed mobile:right-4 mobile:top-3 text-white hover:cursor-pointer">
+            <ShoppingBasketIcon />
+            <p>0</p>
+          </div>
+        </Link>
       </div>
     </nav>
   );
