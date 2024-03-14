@@ -22,6 +22,20 @@ const nextConfig = {
         pathname:
           "/blog/wp-content/uploads/2017/12/Happy-New-Year-2016-Gifts-Ideas-for-Family-1024x778.jpg",
       },
+      {
+        protocol: "https",
+        hostname: "graphicsfamily.com",
+        port: "",
+        pathname:
+          "/wp-content/uploads/edd/2022/06/Free-E-commerce-Product-Banner-Design-with-Green-Colors-scaled.jpg",
+      },
+      {
+        protocol: "https",
+        hostname: "t3.ftcdn.net",
+        port: "",
+        pathname:
+          "/jpg/04/65/46/52/360_F_465465254_1pN9MGrA831idD6zIBL7q8rnZZpUCQTy.jpg",
+      },
     ],
   },
 };

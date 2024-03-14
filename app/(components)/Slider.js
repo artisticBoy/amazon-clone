@@ -49,6 +49,28 @@ export default function Slider() {
             className="homeImage__1"
           />
         </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src={
+              "https://t3.ftcdn.net/jpg/04/65/46/52/360_F_465465254_1pN9MGrA831idD6zIBL7q8rnZZpUCQTy.jpg"
+            }
+            width={1000}
+            height={1000}
+            alt="image"
+            className="homeImage__1"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src={
+              "https://graphicsfamily.com/wp-content/uploads/edd/2022/06/Free-E-commerce-Product-Banner-Design-with-Green-Colors-scaled.jpg"
+            }
+            width={1000}
+            height={1000}
+            alt="image"
+            className="homeImage__1"
+          />
+        </SwiperSlide>
       </Swiper>
     </>
   );

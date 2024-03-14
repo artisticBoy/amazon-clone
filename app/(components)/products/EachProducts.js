@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { increment } from "@/app/(GlobalRedux)/features/cartSlice";
 
 export default function EachProducts({ data }) {
+  const dispatch = useDispatch();
   return (
     <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 mobile:grid-cols-1 z-30">
       {data.map((product) => (
@@ -18,7 +21,10 @@ export default function EachProducts({ data }) {
               </p>
               <p className="font-bold text-lg mb-auto">${product.price}</p>
               <div className="w-full mb-2">
-                <button className="bg-[#37475A] hover:bg-[#FEBD69] transition-all ease-in-out delay-75 p-3 w-full rounded-lg">
+                <button
+                  onClick={() => dispatch(increment)}
+                  className="bg-[#37475A] hover:bg-[#FEBD69] transition-all ease-in-out delay-75 p-3 w-full rounded-lg"
+                >
                   Add to cart
                 </button>
               </div>

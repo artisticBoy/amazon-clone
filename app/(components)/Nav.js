@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import SearchIcon from "@mui/icons-material/Search";
@@ -5,8 +7,10 @@ import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import Link from "next/link";
+import { useSelector } from "react-redux";
 
 export default function Nav() {
+  const { basket } = useSelector((state) => state.cart);
   return (
     <nav className="bg-[#131A22] w-full p-3">
       <div className="w-full lg:flex lg:justify-evenly lg:items-center">
@@ -71,7 +75,7 @@ export default function Nav() {
         <Link href={"/checkout"}>
           <div className="lg:static mobile:flex mobile:items-center mobile:gap-1 mobile:fixed mobile:right-4 mobile:top-3 text-white hover:cursor-pointer">
             <ShoppingBasketIcon />
-            <p>0</p>
+            <p>{basket.length}</p>
           </div>
         </Link>
       </div>

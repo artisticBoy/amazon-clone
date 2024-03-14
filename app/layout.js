@@ -3,8 +3,7 @@ import "./globals.css";
 import Nav from "./(components)/Nav";
 import Semibar from "./(components)/Semibar";
 import Footer from "./(components)/Footer";
-import { Suspense } from "react";
-import Loading from "./loading";
+import Providers from "./(GlobalRedux)/provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,11 +16,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Nav />
-        <Semibar />
-        <br />
-        <Suspense fallback={<Loading />}>{children}</Suspense>
-        <Footer />
+        <Providers>
+          <Nav />
+          <Semibar />
+          <br />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
